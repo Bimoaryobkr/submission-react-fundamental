@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+  --font-color: #251B37;
+  --background-color: #FFCACA;
+  --font-color-secondary: #1e1430;
+  --border-color: black;
+  --hover-button: #f3aeae;
+}
+
+[data-theme='dark'] {
+  --font-color: #FFCACA;
+  --background-color: #251B37;
+  --font-color-secondary: #FFECEF;
+  --border-color: #aaa;
+  --hover-button: #150b28;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  color: var(--font-color);
+}
+
+.app-container {
+  color: var(--font-color);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  transition: all ease-in-out 0.5s;
+}
+
+.app_header {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  padding: 4px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app_header h1 {
+  flex: 1 1;
+  margin: 20px 0;
+}
+
+.app_header button {
+  background-color: transparent;
+  color: var(--font-color);
+  font-family: 'Inter', sans-serif;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 60px;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul li {
+  display: flex;
+  padding: 16px;
+}
+
+.navigation ul li h1 {
+  display: flex;
+  padding-right: 80px;
+  margin: 8px 0;
+}
+
+.navigation ul li a {
+  font-size: 28px;
+  color: var(--font-color);
+  text-decoration: none !important;
+}
+
+.navigation ul li button {
+  background-color: transparent;
+  color: var(--font-color);
+  font-family: 'Inter', sans-serif;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 60px;
+}
+
+main {
+  margin: 0 auto;
+  padding: 32px 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.login-page p a {
+  text-decoration: none;
+  color: var(--font-color-secondary);
+}
+
+.login-page p a:hover {
+  color: #3700B3;
+}
+
+.login-input,
+.register-input {
+    margin-top: 16px;
+}
+
+.login-input input,
+.register-input input {
+    display: block;
+    padding: 16px;
+    width: 50%;
+    margin: 8px 0;
+    font-size: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.login-input button,
+.register-input button {
+    display: block;
+    width: 20%;
+    padding: 15px;
+    font-size: 20px;
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    margin: 16px 0;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.login-input button:hover,
+.register-input button:hover {
+    background-color: var(--hover-button);
+}
+
+.app_body {
+  max-width: 1000px;
+  margin: 16px auto;
+  padding: 12px;
+}
+
+.app_body h2 {
+  font-weight: normal;
+  margin: 16px 0;
+}
+
+input,
+textarea {
+  padding: 12px;
+  margin: 12px 0;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  color: var(--font-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--font-color);
+  font-weight: bold;
+}
+
+.note-input {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 48px;
+}
+
+.note-input input,
+.note-input textarea {
+  display: block;
+  width: 100%;
+}
+
+.input_title {
+  font-weight: bold;
+}
+
+.input_title_bound {
+  font-size: 14px;
+  text-align: right;
+  color: var(--border-color);
+}
+
+.input_body {
+  min-height: 175px;
+}
+
+.note-input button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  color: var(--font-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--font-color);
+}
+
+.error-message {
+  margin-top: 25%;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.note-item {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item_content {
+  padding: 12px;
+  flex: 1;
+}
+
+.item_title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.item_title a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.item_title a:hover {
+  color: #3700B3;
+}
+
+.item_date {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: var(--font-color-secondary);
+}
+
+.item_body {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.note-item__action {
+  display: flex;
+}
+
+.item_delete {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  padding: 8px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.item_delete {
+  border-right: 1px solid var(--border-color);
+  color: #ff5f52;
+}
+
+.item_delete:hover {
+  color: #b00020;
+}
+
+.detail-page {
+  margin: 0 auto;
+  margin-top: 32px;
+  width: 90%;
+}
+
+.detail-page_title {
+  font-size: 48px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.detail-page_createdAt {
+  color: var(--font-color-secondary);
+}
+
+.detail-page_body {
+  line-height: 1.5;
+  margin-top: 36px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 425px) {
+  .navigation ul li h1 {
+    display: flex;
+    padding-right: 15px;
+  }
+
+  .navigation ul li a {
+    font-size: 20px;
+    color: var(--font-color);
+    text-decoration: none !important;
+  }
+
+  .navigation ul li button {
+    background-color: transparent;
+    color: var(--font-color);
+    font-family: 'Inter', sans-serif;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .note-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item-search input {
+    min-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .note-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
